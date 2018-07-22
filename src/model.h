@@ -10,10 +10,13 @@
 
 namespace sagacious
 {
+    using bsoncxx::builder::basic::kvp;
+
     template <class T> class model
     {
     public:
         model();
+        model(std::string db, std::string collection);
         virtual ~model();
 
         void save();
@@ -22,13 +25,24 @@ namespace sagacious
         static T get(std::string id);
 
     protected:
-        mongocxx::collection collection() const;
+        mongocxx::collection collection() const { return get_collection(); }
+
+        static thread_local mongocxx::client client;
 
     private:
-        static thread_local mongocxx::client client;
+        virtual mongocxx::collection get_collection() const;
+
+        const std::string _db;
+        const std::string _collection;
     };
 
     template <class T> model<T>::model()
+    {
+    }
+
+    template <class T> model<T>::model(std::string db, std::string collection)
+      : _db(db),
+        _collection(collection)
     {
     }
 
@@ -43,8 +57,6 @@ namespace sagacious
     template <class T> void model<T>::remove()
     {
     }
-
-    using bsoncxx::builder::basic::kvp;
 
     template <class T> T model<T>::get(std::string id)
     {
@@ -69,10 +81,11 @@ namespace sagacious
         return obj;
     }
 
-    template <class T> mongocxx::collection model<T>::collection() const
-    {
-    }
-
     template <class T>
     thread_local mongocxx::client model<T>::client{mongocxx::uri{}};
+
+    template <class T> mongocxx::collection model<T>::get_collection() const
+    {
+        return model<T>::client[_db][_collection];
+    }
 }
