@@ -25,7 +25,10 @@ namespace sagacious
         public:
             explicit response(std::shared_ptr<HttpServer::Response> response);
 
+            void send(SimpleWeb::StatusCode code, std::istream &body);
             void send(SimpleWeb::StatusCode code, std::string body);
+
+            void send_json(SimpleWeb::StatusCode code, std::istream &body);
             void send_json(SimpleWeb::StatusCode code, std::string body);
 
         private:

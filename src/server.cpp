@@ -23,7 +23,18 @@ namespace sagacious
             _r->write(code, body, _headers);
         }
 
+        void response::send(SimpleWeb::StatusCode code, std::istream &body)
+        {
+            _r->write(code, body, _headers);
+        }
+
         void response::send_json(SimpleWeb::StatusCode code, std::string body)
+        {
+            _headers.emplace("Content-Type", "application/json");
+            send(code, body);
+        }
+
+        void response::send_json(SimpleWeb::StatusCode code, std::istream &body)
         {
             _headers.emplace("Content-Type", "application/json");
             send(code, body);
