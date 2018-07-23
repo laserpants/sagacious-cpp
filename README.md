@@ -26,7 +26,7 @@ public:
     managed_ptr(const managed_ptr&) = delete;
     ~managed_ptr() { delete _ptr; }
 
-    T* operator ->() const { return _ptr; }
+    T* operator->() const { return _ptr; }
 
 private:
     T* const _ptr;
