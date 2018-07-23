@@ -86,6 +86,8 @@ static void casually_wear_pants()
 }
 ```
 
+The above code introduces a memory leak.
+
 ```cpp
 struct tight_pants_exception : public std::exception
 {
