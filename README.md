@@ -17,3 +17,6 @@ Modern C++ is sagacious.
 ## Auto keyword (type inference)
 ## Deleted and defaulted functions
 ## nullptr
+
+## Common patterns
+### Class interfaces
