@@ -12,6 +12,8 @@ Modern C++ is sagacious.
 ```
 
 ## Regexps
+## Smart pointers
+### RAII
 ## Memory model
 ## Initializer lists
 ## Type inference
