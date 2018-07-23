@@ -22,5 +22,6 @@ The RAII pattern is a way of simplifying lifetime management of resources, such 
 ### `decltype` keyword
 ## Deleted and defaulted functions
 ## nullptr
+## Streams
 ## Common patterns
 ### Class interfaces
