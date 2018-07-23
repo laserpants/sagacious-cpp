@@ -20,7 +20,7 @@ Regular expressions are part of the C++11 standard.
 
 ## Smart pointers
 ### RAII
-Having raw pointers fluttering around all over the place makes the code more unpredictable, and exposes unnecessary low-level details. The RAII idiom is a way of simplifying lifetime management of resources; such as heap memory, database connections, sockets, or files; by encapsulating these concerns into a class. RAII, which stands for *Resource Acquisition Is Initialization*, 
+Having raw pointers fluttering around all over the place makes code more unpredictable, and exposes unnecessary low-level details. The RAII idiom is a way of simplifying lifetime management of resources; such as heap memory, database connections, sockets, or files; by encapsulating these concerns into a class. RAII, which stands for *Resource Acquisition Is Initialization*, 
 
 ```cpp
 template <class T> class managed_ptr
@@ -145,7 +145,7 @@ pants destroyed
 too tight
 ```
 
-The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
+The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost. The `unique_ptr` is unique in the sense that it holds the only reference to the object it is pointing to.
 
 ## Memory model
 ### std::thread
