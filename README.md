@@ -32,7 +32,7 @@ private:
 };
 ```
 
-The `= delete` specifier introduces, what is known as a, *deleted function declaration*; and it is discussed under [Deleted and defaulted functions](#deleted-and-defaulted-functions).
+(The `= delete` specifier introduces, what is known as a, *deleted function declaration*; and it is discussed under [Deleted and defaulted functions](#deleted-and-defaulted-functions).)
 
 ```cpp
 #include <iostream>
