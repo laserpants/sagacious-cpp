@@ -70,6 +70,8 @@ int main()
 }
 ```
 
+Note that through overloading the `->` operator we can dereference the `managed_ptr` just as if it was an ordinary pointer. The output of this program is:
+
 ```
 pants created
 pants worn
