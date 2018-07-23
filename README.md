@@ -13,6 +13,11 @@ Modern C++ can be sagacious.
 
 ## Regexps
 Regular expressions are part of the C++11 standard.
+
+```cpp
+#include <regex>
+```
+
 ## Smart pointers
 ### RAII
 The RAII idiom gives us a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
