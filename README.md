@@ -68,7 +68,7 @@ pants worn
 pants destroyed
 ```
 
-This type of smart pointer is know as `unique_ptr` ([link)](https://en.cppreference.com/w/cpp/memory/unique_ptr) ) in the C++11 STL and as `scoped_ptr` in the Boost libraries.
+This type of smart pointer is know as `std::unique_ptr` ([link](https://en.cppreference.com/w/cpp/memory/unique_ptr)) in the C++11 STL and as `scoped_ptr` in the Boost libraries.
 
 ## Memory model
 ## Initializer lists
