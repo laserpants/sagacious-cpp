@@ -14,6 +14,7 @@ Modern C++ is sagacious.
 ## Regexps
 ## Smart pointers
 ### RAII
+The RAII pattern is a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
 ## Memory model
 ## Initializer lists
 ## Type inference
