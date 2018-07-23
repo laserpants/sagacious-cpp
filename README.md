@@ -48,15 +48,15 @@ public:
     void wear() { cout << "pants worn" << endl; }
 };
 
-static void fun()
+static void wear_pants()
 {
-    managed_ptr<pants> fez;
-    fez->wear();
+    managed_ptr<pants> pants;
+    pants->wear();
 }
 
 int main()
 {
-    fun();
+    wear_pants();
     return 0;
 }
 ```
