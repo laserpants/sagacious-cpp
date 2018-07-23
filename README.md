@@ -6,6 +6,11 @@ Modern C++ is sagacious.
 ### Rvalue references
 ## Functional programming
 ### Lambda expressions
+
+```
+[capture](params)->return_type { body }
+```
+
 ## Regexps
 ## Memory model
 ## Initializer lists
