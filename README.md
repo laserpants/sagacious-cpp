@@ -23,5 +23,8 @@ The RAII pattern is a way of simplifying lifetime management of resources, such 
 ## Deleted and defaulted functions
 ## nullptr
 ## Streams
+### C++14 Lazy streams
+<!-- https://www.infoq.com/news/2014/07/cpp14-streams-lazy-functional -->
 ## Common patterns
 ### Class interfaces
+## Algorithms library
