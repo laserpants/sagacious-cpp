@@ -32,7 +32,7 @@ private:
 };
 ```
 
-see [https://github.com/laserpants/sagacious-cpp/edit/master/README.md#deleted-and-defaulted-functions](Deleted and defaulted functions).
+see [Deleted and defaulted functions](https://github.com/laserpants/sagacious-cpp/edit/master/README.md#deleted-and-defaulted-functions).
 
 ```cpp
 #include <iostream>
