@@ -20,15 +20,15 @@ The RAII pattern is a way of simplifying lifetime management of resources, such 
 template <class T> class managed_ptr
 {
 public:
-    managed_ptr(T *p) : _ptr{p} {}
+    managed_ptr(T* p) : _ptr{p} {}
     managed_ptr() : _ptr{new T} {}
     managed_ptr(const managed_ptr&) = delete;
     ~managed_ptr() { delete _ptr; }
 
-    T *operator ->() const { return _ptr; }
+    T* operator ->() const { return _ptr; }
 
 private:
-    T *const _ptr;
+    T* const _ptr;
 };
 ```
 
