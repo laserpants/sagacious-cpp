@@ -1,4 +1,4 @@
-# sagacious-cpp
+# Sagacious C++
 
 Modern C++ is sagacious.
 
