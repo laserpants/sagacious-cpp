@@ -1,6 +1,6 @@
 # Sagacious C++
 
-Modern C++ is sagacious.
+Modern C++ can be sagacious.
 
 ## Move semantics
 ### Rvalue references
