@@ -73,6 +73,15 @@ pants worn
 pants destroyed
 ```
 
+```
+static void wear_pants()
+{
+    pants* dynamic_pants = new pants;
+    pants->wear();
+    delete dynamic_pants;
+}
+```
+
 This type of smart pointer is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
 
 ## Memory model
