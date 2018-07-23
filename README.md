@@ -131,6 +131,20 @@ pants created
 too tight
 ```
 
+```cpp
+static void casually_wear_pants()
+{
+    managed_ptr<pants> pants;
+    pants->wear();
+}
+```
+
+```
+pants created
+pants destroyed
+too tight
+```
+
 The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
 
 ## Memory model
