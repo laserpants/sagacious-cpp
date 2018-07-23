@@ -16,8 +16,8 @@ Modern C++ is sagacious.
 ## Initializer lists
 ## Type inference
 ### `auto` keyword
-### `decltype` keyrowrd
+### `decltype` keyword
 ## Deleted and defaulted functions
-## `nullptr`
+## nullptr
 ## Common patterns
 ### Class interfaces
