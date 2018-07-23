@@ -15,6 +15,50 @@ Modern C++ is sagacious.
 ## Smart pointers
 ### RAII
 The RAII pattern is a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
+
+```cpp
+template <class T> class managed_ptr
+{
+public:
+    managed_ptr(T *p) : _ptr{p} {}
+    managed_ptr() : _ptr{new T} {}
+    managed_ptr(const managed_ptr &) = delete;
+    ~managed_ptr() { delete _ptr; }
+
+    T *operator ->() const { return _ptr; }
+
+private:
+    T *const _ptr;
+};
+```
+
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+class pants
+{
+public:
+    pants() { cout << "pants created" << endl; }
+    ~pants() { cout << "pants destroyed" << endl; }
+    void wear() { cout << "pants worn" << endl; }
+};
+
+static void fun()
+{
+    managed_ptr<pants> fez;
+    fez->wear();
+}
+
+int main()
+{
+    fun();
+    return 0;
+}
+```
+
 ## Memory model
 ## Initializer lists
 ## Type inference
