@@ -148,6 +148,8 @@ too tight
 The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
 
 ## Memory model
+### std::thread
+### std::async
 ## Initializer lists
 ## Type inference
 ### `auto` keyword
