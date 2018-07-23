@@ -73,12 +73,15 @@ pants worn
 pants destroyed
 ```
 
-```
-static void wear_pants()
+```cpp
+static void casually_wear_pants()
 {
-    pants* dynamic_pants = new pants;
-    pants->wear();
-    delete dynamic_pants;
+    pants* the_pants = new pants;
+    if (the_pants->are_too_tight()) {
+        return;                          // Oops! We forgot to delete the_pants
+    }
+    the_pants->wear();
+    delete the_pants;
 }
 ```
 
