@@ -20,7 +20,7 @@ Regular expressions are part of the C++11 standard.
 
 ## Smart pointers
 ### RAII
-The RAII idiom is a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
+The RAII idiom is a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. Instead of having raw pointers flying around all over the code,  
 
 ```cpp
 template <class T> class managed_ptr
