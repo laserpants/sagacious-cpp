@@ -160,3 +160,4 @@ The type of smart pointer described here is know as [`std::unique_ptr`](https://
 ## Common patterns
 ### Class interfaces
 ## Algorithms library
+## Style
