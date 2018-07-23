@@ -32,6 +32,8 @@ private:
 };
 ```
 
+see [#deleted-and-defaulted-functions](Deleted and defaulted functions).
+
 ```cpp
 #include <iostream>
 
