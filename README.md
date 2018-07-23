@@ -85,7 +85,53 @@ static void casually_wear_pants()
 }
 ```
 
-This type of smart pointer is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
+```cpp
+struct tight_pants_exception : public std::exception
+{
+    const char* what() const throw() { return "too tight"; }
+};
+
+class pants
+{
+public:
+    pants() { cout << "pants created" << endl; }
+    ~pants() { cout << "pants destroyed" << endl; }
+    void wear();
+    bool too_tight() const { return true; }
+};
+
+void pants::wear() 
+{ 
+    if (too_tight()) {
+        throw tight_pants_exception{};
+    } else {
+        cout << "pants worn" << endl; 
+    }
+}
+
+static void casually_wear_pants()
+{
+    pants* the_pants = new pants;
+    the_pants->wear();
+    delete the_pants;
+}
+
+int main()
+{
+    try {
+        casually_wear_pants();
+    } catch (tight_pants_exception e) {
+        cout << e.what() << endl;
+    }
+    return 0;
+```
+
+```
+pants created
+too tight
+```
+
+The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost.
 
 ## Memory model
 ## Initializer lists
