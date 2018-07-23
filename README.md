@@ -14,7 +14,7 @@ Modern C++ is sagacious.
 ## Regexps
 ## Smart pointers
 ### RAII
-The RAII idiom is a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
+The RAII idiom gives us a way of simplifying lifetime management of resources, such as heap memory, database connections, sockets, or files. 
 
 ```cpp
 template <class T> class managed_ptr
