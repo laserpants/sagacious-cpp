@@ -14,9 +14,10 @@ Modern C++ is sagacious.
 ## Regexps
 ## Memory model
 ## Initializer lists
-## Auto keyword (type inference)
+## Type inference
+### `auto` keyword
+### `decltype` keyrowrd
 ## Deleted and defaulted functions
-## nullptr
-
+## `nullptr`
 ## Common patterns
 ### Class interfaces
