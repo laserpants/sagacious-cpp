@@ -145,7 +145,7 @@ pants destroyed
 too tight
 ```
 
-The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost. The `unique_ptr` is unique in the sense that it holds the only reference to the object it is pointing to.
+The type of smart pointer described here is know as [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost. The `unique_ptr` is *unique* in the sense that it holds the only reference to the object it is pointing to.
 
 ## Memory model
 ### std::thread
