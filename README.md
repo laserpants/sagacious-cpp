@@ -19,8 +19,9 @@ Regular expressions are part of the C++11 standard.
 ```
 
 ## Smart pointers
+According to modern C++ best practices, direct use of `new` and `delete` in client code should be avoided. Having raw pointers fluttering around makes code more unpredictable and exposes unnecessary low-level details.
 ### RAII
-Having raw pointers fluttering around all over the place makes code more unpredictable, and exposes unnecessary low-level details. The RAII idiom is a way of simplifying lifetime management of resources; such as heap memory, database connections, sockets, or files; by encapsulating these concerns into a class. RAII, which stands for *Resource Acquisition Is Initialization*, 
+The RAII idiom is a way of simplifying lifetime management of resources; such as heap memory, database connections, sockets, or files; by encapsulating these concerns into a class. RAII, which stands for *Resource Acquisition Is Initialization*, 
 
 ```cpp
 template <class T> class managed_ptr
