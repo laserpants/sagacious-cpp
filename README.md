@@ -59,6 +59,12 @@ int main()
 }
 ```
 
+```
+pants created
+pants worn
+pants destroyed
+```
+
 ## Memory model
 ## Initializer lists
 ## Type inference
