@@ -1,3 +1,3 @@
 # sagacious-cpp
 
-C++11 is sagacious.
+Modern C++ is sagacious.
