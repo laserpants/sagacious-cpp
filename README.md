@@ -54,7 +54,7 @@ According to modern C++ best practices, direct use of `new` and `delete` in clie
 The RAII idiom is a way of simplifying lifetime management of resources; such as heap memory, database connections, sockets, or files; by encapsulating those concerns into a class. RAII, which stands for *Resource Acquisition Is Initialization*, 
 
 ```cpp
-template <class T> class managed_ptr
+template <typename T> class managed_ptr
 {
 public:
     managed_ptr(T* p) : _ptr{p} {}
