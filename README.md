@@ -108,7 +108,7 @@ pants worn
 pants destroyed
 ```
 
-The `pants` object is automatically destroyed when the `managed_ptr` goes out of scope. To illustrate the merits of this, here is an example where an ordinary pointer is used instead:
+The `pants` object is automatically destroyed when the `managed_ptr` goes out of scope. To illustrate the merits of this, here is an example where a raw pointer is used instead:
 
 ```cpp
 static void casually_wear_pants()
