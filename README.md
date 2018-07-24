@@ -6,6 +6,35 @@ Modern C++ can be sagacious.
 ### Rvalue references
 ## Functional programming
 A map; analogous to the mathematical concept of a homomorphism &ndash; or *structure-preserving map*; can be expressed  using code such as this:
+
+```cpp
+#include <algorithm>
+#include <functional>
+#include <iostream>
+#include <vector>
+
+template <typename Dom, typename Cod>
+std::vector<Cod> map(const std::vector<Dom>& xs, std::function<Cod(const Dom)> op)
+{
+    std::vector<Cod> ys;
+    ys.resize(xs.size());
+    std::transform(xs.begin(), xs.end(), ys.begin(), op);
+    return ys;
+}
+
+int main()
+{
+    std::vector<int> xs{10, 20, 30, 40, 50, 60, 70, 80};
+
+    auto ys = map<int, double>(xs, [](const int i) { 
+        return sqrt(i); 
+    });
+    std::for_each(ys.begin(), ys.end(), [](const double& r) { 
+        std::cout << r << std::endl; 
+    });
+}
+```
+
 ### Lambda expressions
 
 ```
