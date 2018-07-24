@@ -5,6 +5,12 @@ Modern C++ can be sagacious.
 ## Move semantics
 ### Rvalue references
 ## Functional programming
+### Lambda expressions
+
+```
+[capture](params)->return_type { body }
+```
+
 A map; analogous to the mathematical concept of a homomorphism &ndash; or *structure-preserving map*; can be expressed  using code such as this:
 
 ```cpp
@@ -33,12 +39,6 @@ int main()
         std::cout << r << std::endl; 
     });
 }
-```
-
-### Lambda expressions
-
-```
-[capture](params)->return_type { body }
 ```
 
 ## Regexps
