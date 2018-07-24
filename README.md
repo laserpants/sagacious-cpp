@@ -11,7 +11,7 @@ Modern C++ can be sagacious.
 [capture](params)->return_type { body }
 ```
 
-A map; analogous to the mathematical concept of a homomorphism &ndash; or *structure-preserving map*; can be expressed  using code such as this:
+A map; analogous to the mathematical concept of a homomorphism &ndash; or *structure-preserving map*; can be expressed  through code such as this:
 
 ```cpp
 #include <algorithm>
