@@ -166,6 +166,7 @@ The type of smart pointer described here is know as [`std::unique_ptr`](https://
 ### `decltype` keyword
 ## Deleted and defaulted functions
 ## nullptr
+## constexpr
 ## Streams
 ### C++14 Lazy streams
 <!-- https://www.infoq.com/news/2014/07/cpp14-streams-lazy-functional -->
