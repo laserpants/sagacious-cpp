@@ -170,6 +170,8 @@ pants created
 too tight
 ```
 
+This time, the problem is not as easy to detect.
+
 ```cpp
 static void casually_wear_pants()
 {
