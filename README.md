@@ -5,7 +5,7 @@ Modern C++ can be sagacious.
 ## Move semantics
 ### Rvalue references
 ## Functional programming
-A map; analogous to the mathematical concept of a *homomorphism* &ndash; or structure-preserving map; can be expressed consisely using code such as this:
+A map; analogous to the mathematical concept of a homomorphism &ndash; or *structure-preserving map*; can be expressed consisely using code such as this:
 ### Lambda expressions
 
 ```
