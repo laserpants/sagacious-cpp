@@ -68,6 +68,8 @@ void fun()
 }
 ```
 
+In the above example, `obj` has [automatic storage duration](http://www.enseignement.polytechnique.fr/informatique/INF478/docs/Cpp/en/c/language/automatic_storage_duration.html), and the lifetime of its resources is bound to the block in which it appears.
+
 RAII, which stands for *Resource Acquisition Is Initialization*, 
 
 ```cpp
