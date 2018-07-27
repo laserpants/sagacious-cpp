@@ -81,6 +81,7 @@ public:
     ~managed_ptr() { delete _ptr; }
 
     T* operator->() const { return _ptr; }
+    T& operator*() const { return *_ptr; }
 
 private:
     T* const _ptr;
@@ -118,7 +119,7 @@ int main()
 }
 ```
 
-Note that through overloading the `->` operator we can dereference the `managed_ptr` type just as if it was an ordinary pointer. The output of this program is:
+Note that through overloading the `*` and `->` operators we can dereference the `managed_ptr` type just as if it was an ordinary pointer. The output of this program is:
 
 ```
 pants created
