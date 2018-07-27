@@ -177,7 +177,7 @@ int main()
 {
     try {
         casually_wear_pants();
-    } catch (tight_pants_exception e) {
+    } catch (tight_pants_exception& e) {
         cout << e.what() << endl;
     }
     return 0;
