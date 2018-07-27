@@ -53,7 +53,7 @@ According to modern C++ [best practices](https://github.com/isocpp/CppCoreGuidel
 ### RAII
 Smart pointers implement the RAII idiom, which is a way of simplifying lifetime management of resources; such as memory, database connections, sockets, or files; by relying on stack allocated objects to automatically release allocated resources when falling out of scope. 
 
-```
+```cpp
 class raii_object
 {
     ~raii_object()
