@@ -49,7 +49,7 @@ Regular expressions are part of the C++11 standard.
 ```
 
 ## Smart pointers
-According to modern C++ [best practices](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-newdelete), direct use of `new` and `delete` in client code should be avoided. Passing around raw pointers makes code more unpredictable and exposes unnecessary low-level details to the users of a class. A smart pointer is a data type that simulates the behavior of a pointer, by encapsulating the raw pointer type, and by automatically managing allocation and deallocation of the memory it is responsible for. Smart pointers have been around for some time in libraries like Boost, and in the Qt framework.
+In line with modern C++ [best practices](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-newdelete), direct use of `new` and `delete` in client code should be avoided. Passing around raw pointers makes code more unpredictable and exposes unnecessary low-level details to the users of a class. A smart pointer is a data type that simulates the behavior of a pointer, by encapsulating the raw pointer type, and by automatically managing allocation and deallocation of the memory it is responsible for. Smart pointers have been around for some time in libraries like Boost, and in the Qt framework.
 ### RAII
 Smart pointers implement the RAII idiom, which is a way of simplifying lifetime management of resources; such as memory, database connections, sockets, or files; by relying on stack allocated objects to automatically release these when going out of scope. 
 
