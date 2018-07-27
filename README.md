@@ -56,10 +56,8 @@ Smart pointers implement the RAII idiom, which is a way of simplifying lifetime 
 ```cpp
 class raii_object
 {
-    ~raii_object()
-    {
-        // ... clean up
-    }
+    raii_object() { /* acquires some resource */ }
+    ~raii_object() { /* ... clean up */ }
 }
 
 void fun()
