@@ -60,6 +60,7 @@ public:
     managed_ptr(T* p) : _ptr{p} {}
     managed_ptr() : _ptr{new T} {}
     managed_ptr(const managed_ptr&) = delete;
+    managed_ptr& operator=(const managed_ptr&) = delete;
     ~managed_ptr() { delete _ptr; }
 
     T* operator->() const { return _ptr; }
