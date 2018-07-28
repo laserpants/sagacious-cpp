@@ -13,16 +13,16 @@ Lvalues appear on the *left*-hand-side of an assignment:
 int x = 1 + 1;
 ```
 
-The following will not work:
+Here, `x` is an lvalue, and `1 + 1` an rvalue. The following will not work:
 
 ```cpp
 1 + 1 = x;
 ```
 
-The error message explains:
+My compiler says:
 
 ```
-lvalue required as left operand of assignment
+error: lvalue required as left operand of assignment
      1 + 1 = x;
            ^
 ```
