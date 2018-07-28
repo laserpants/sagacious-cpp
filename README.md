@@ -4,8 +4,8 @@ Modern C++ can be sagacious.
 
 ## Move semantics
 ### Rvalue references
-Expressions in C++ are always either an *lvalue*, or an *rvalue*.
-* Lvalues are named objects who may last beyond a single expression. All variables are lvalues.
+An expressions in C++ is always either an *lvalue*, or an *rvalue*.
+* Lvalues are named objects who may last beyond a single expression. All *variables* are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
 
 ```cpp
@@ -21,6 +21,21 @@ error: lvalue required as left operand of assignment
      1 + 1 = x;
            ^
 ```
+
+An (lvalue) reference creates an alias for an existing object.
+
+```
+int main()
+{
+    int x = 5;
+    int& y = x;
+    y = 0;
+    cout << x << endl;
+    return 0;
+}
+```
+
+This output of this program is `0`.
 
 ## Functional programming
 ### Lambda expressions
