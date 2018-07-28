@@ -7,6 +7,15 @@ Modern C++ can be sagacious.
 Expressions in C++ are always either an *lvalue*, or an *rvalue*.
 * Lvalues are named objects who may last beyond a single expression. All variables are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
+
+```cpp
+int x = y + 3;
+```
+
+```cpp
+y + 3 = x;
+```
+
 ## Functional programming
 ### Lambda expressions
 
