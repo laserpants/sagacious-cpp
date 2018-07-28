@@ -34,7 +34,7 @@ An lvalue *reference* creates an alias for an existing object.
 int main()
 {
     int x = 5;
-    int& y = x;
+    int& y = x;  // y refers to x
     y = 0;
     cout << x << endl;
     return 0;
