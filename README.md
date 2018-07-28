@@ -41,7 +41,7 @@ int main()
 }
 ```
 
-This output of this program is `0`. The lvalue reference declarator (&) is a syntactic addition that doesn't exist in C.
+This output of this program is `0`. The lvalue reference declarator (`&`) is a syntactic addition introduced by C++. It doesn't exist in C.
 
 ## Functional programming
 ### Lambda expressions
