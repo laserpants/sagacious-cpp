@@ -4,6 +4,7 @@ Modern C++ can be sagacious.
 
 ## Move semantics
 ### Rvalue references
+Expressions in C++ are always either an *lvalue*, or an *rvalue*.
 ## Functional programming
 ### Lambda expressions
 
