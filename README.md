@@ -69,7 +69,7 @@ void fun()
 }
 ```
 
-In the above example, `obj` has [automatic storage duration](http://www.enseignement.polytechnique.fr/informatique/INF478/docs/Cpp/en/c/language/automatic_storage_duration.html), which means that both its scope and its lifetime are limited by the block in which it appears. 
+In the above example, since `obj` has [automatic storage duration](http://www.enseignement.polytechnique.fr/informatique/INF478/docs/Cpp/en/c/language/automatic_storage_duration.html), both its scope and its lifetime are limited by the block in which it appears. 
 
 ```cpp
 template <typename T> class managed_ptr
