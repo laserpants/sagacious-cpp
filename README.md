@@ -9,11 +9,17 @@ Expressions in C++ are always either an *lvalue*, or an *rvalue*.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
 
 ```cpp
-int x = y + 3;
+int x = 1 + 1;
 ```
 
 ```cpp
-y + 3 = x;
+1 + 1 = x;
+```
+
+```
+error: lvalue required as left operand of assignment
+     1 + 1 = x;
+           ^
 ```
 
 ## Functional programming
