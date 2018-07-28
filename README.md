@@ -43,7 +43,7 @@ int main()
 
 This output of this program is `0`. The lvalue reference declarator (`&`) is a syntactic addition introduced by C++. It doesn't exist in C. (Pointers can be used in C to achieve the same result.) The &-declarator can also be used to express that function arguments should be passed by reference:
 
-```
+```cpp
 static void do_stuff_with(int& x)
 {
     x = 42;
