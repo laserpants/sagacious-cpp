@@ -5,7 +5,7 @@ Modern C++ can be sagacious.
 ## Move semantics
 ### Rvalue references
 An expressions in C++ is always either an *lvalue*, or an *rvalue*.
-* Lvalues are named objects who may last beyond a single expression. All *variables* are lvalues.
+* Lvalues are named objects who last longer than a single expression. All *variables* are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
 
 As demonstrated by the following example, lvalues appear on the *left*-hand-side of an assignment.
