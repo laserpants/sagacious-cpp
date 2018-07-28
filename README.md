@@ -22,9 +22,9 @@ error: lvalue required as left operand of assignment
            ^
 ```
 
-An (lvalue) reference creates an alias for an existing object.
+An lvalue reference creates an alias for an existing object.
 
-```
+```cpp
 int main()
 {
     int x = 5;
