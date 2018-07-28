@@ -144,7 +144,7 @@ private:
 };
 ```
 
-(The `= delete` specifier introduces, what is known as, a *deleted function declaration*. This syntax is discussed under [Deleted and defaulted functions](#deleted-and-defaulted-functions).)
+Note that we do not allow these objects to be copied. More about this later. (The `= delete` specifier introduces, what is known as, a *deleted function declaration*. This syntax is discussed under [Deleted and defaulted functions](#deleted-and-defaulted-functions).)
 
 Here is how we can use the `managed_ptr` class.
 
