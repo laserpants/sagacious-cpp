@@ -264,6 +264,20 @@ too tight
 
 The kind of smart pointer described here is know as [`unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr) in the C++11 standard library and as `scoped_ptr` in Boost. The `unique_ptr` is *unique* in the sense that it holds the *only reference* to the memory it is pointing to. To contrast this, let's look at what it means if we were to allow for this reference to be shared between objects. 
 
+```cpp
+void bad()
+{
+    int* p = new int{1};
+
+    std::unique_ptr<int> foo{p};
+    std::unique_ptr<int> baz{p};  // Bad idea!
+}
+```
+
+```
+*** Error in `./main': double free or corruption (fasttop): 0x000000000244ec20 ***
+```
+
 ## Memory model
 ### std::thread
 ### std::async
