@@ -14,12 +14,10 @@ As demonstrated by the following example, lvalues appear on the *left*-hand-side
 int x = 1 + 1;
 ```
 
-Here, `x` is an lvalue, and `1 + 1` an rvalue. None of the following will work:
+Here, `x` is an lvalue, and `1 + 1` an rvalue. The following will *not* work:
 
 ```cpp
 1 + 1 = x;
-compute() = 3;
-42 = compute();
 ```
 
 My compiler says:
