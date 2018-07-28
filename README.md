@@ -246,7 +246,7 @@ pants created
 too tight
 ```
 
-This time, the problem is not as easy to detect.
+Again, the `delete` call is never reached, but this time the problem is not as easy to detect. Using the `managed_ptr` approach, the code would look like this:
 
 ```cpp
 static void casually_wear_pants()
