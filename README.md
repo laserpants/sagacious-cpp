@@ -8,7 +8,7 @@ An expressions in C++ is always either an *lvalue*, or an *rvalue*.
 * Lvalues are named objects who may last beyond a single expression. All *variables* are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
 
-Lvalues appear on the *left*-hand-side of an assignment.
+As demonstrated by the following example, lvalues appear on the *left*-hand-side of an assignment.
 
 ```cpp
 int x = 1 + 1;
