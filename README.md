@@ -127,7 +127,7 @@ pants worn
 pants destroyed
 ```
 
-The `pants` object is automatically destroyed when the `managed_ptr` goes out of scope. To illustrate the merits of this, here is an example where a raw pointer is used instead:
+The `pants` object is automatically destroyed when the `managed_ptr` goes out of scope. To illustrate why this is beneficial, here is an example where a raw pointer is used instead:
 
 ```cpp
 static void casually_wear_pants()
@@ -141,7 +141,7 @@ static void casually_wear_pants()
 }
 ```
 
-The above code introduces a memory leak. In this case, the problem is easy to spot, and fixed simply by inserting `delete the_pants` before the `return` statement. But consider something a bit more subtle, such as the following program.
+The above code introduces a memory leak. In this case, the problem is easy to spot, and fixed merely by inserting `delete the_pants` before the `return` statement. But consider something a bit more subtle, such as the following program.
 
 ```cpp
 struct tight_pants_exception : public std::exception
