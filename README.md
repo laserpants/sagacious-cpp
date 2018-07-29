@@ -71,8 +71,6 @@ int n = 5;
 int* p = &m;
 p = &n; // I changed my mind.
 
-int m = 1;
-int n = 5;
 int& r = m; // There is no equivalent syntax here
 // r = n    // Results in the value of n (5) being assigned to m
 // &r = n   // Just give up!
@@ -92,13 +90,13 @@ x = 5;
 cout << *p << endl;  // 5
  
 delete p;
-p = nullptr;     // pointer is now a nullptr
+p = nullptr;     // p is now a nullptr
  
-if (p) {         // we can't do this with a reference
+if (p) {         // We can't do this with a reference
    *p = 1;
 }
  
-x = 3;           // undefined behavior
+x = 3;           // Undefined behavior
 ```
 
 An *rvalue reference* is...
