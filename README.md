@@ -105,6 +105,7 @@ The use of references leads to more a declarative programming style, which is sa
 
 An *rvalue reference* is...
 
+<!--
 ```cpp
 #include <cstring>
 #include <iostream>
@@ -234,6 +235,7 @@ buffer& buffer::operator=(buffer&& other)
     return *this;
 }
 ```
+-->
 
 ## Functional programming
 ### Lambda expressions
