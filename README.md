@@ -69,11 +69,11 @@ Lvalue references and pointers have similar behavior. They are mostly interchang
 int m = 1;
 int n = 5;
 int* p = &m;
-p = &n; // I changed my mind
+p = &n; // I changed my mind.
 
 int m = 1;
 int n = 5;
-int& r = m;
+int& r = m; // There is no equivalent syntax here. (r = n results in the value of n (5) being assigned to m.)
 ```
 * References must be initialized when created, and cannot be uninitialized.
 ```cpp
@@ -81,6 +81,23 @@ int* p;  // okay
 int& x;  // not okay
 ```
 * There is no such thing as a null reference.
+```cpp
+int *p = new int;
+*p = 123;
+int &x = *p;     // x is now a local reference to p
+x = 5;
+ 
+std::cout << *p << std::endl;          // 5
+ 
+delete p;
+p = 0;           // pointer is now NULL
+ 
+if (p) {         // we can't do this with a reference
+   *p = 1;
+}
+```
+ 
+x = 3;           // undefined behavior
 
 An *rvalue reference* is...
 
