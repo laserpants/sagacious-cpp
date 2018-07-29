@@ -60,6 +60,86 @@ int main()
 
 The output of this program is `42`.
 
+An rvalue reference is...
+
+```cpp
+#include <cstring>
+#include <iostream>
+#include <memory>
+
+using std::cout;
+using std::endl;
+
+static int created = 0;
+static int destroyed = 0;
+
+class buffer
+{
+public:
+    buffer();
+    ~buffer();
+    buffer(const buffer& other);
+    buffer& operator=(const buffer& other);
+
+private:
+    size_t size;
+    int* data;
+};
+
+// Constructor
+buffer::buffer() : size{1024}, data{new int[size]}
+{
+    created++;
+}
+
+// Destructor
+buffer::~buffer()
+{
+    if (nullptr != data) {
+        delete[] data;
+        data = nullptr;
+        size = 0;
+    }
+    destroyed++;
+}
+
+// Copy constructor
+buffer::buffer(const buffer& other) : size{other.size}, data{new int[size]}
+{
+    memcpy(data, other.data, size * sizeof(int));
+    created++;
+}
+
+// Copy assignment operator
+buffer& buffer::operator=(const buffer& other)
+{
+    if (&other != this) {
+        buffer copy(other);
+        std::swap(size, copy.size);
+        std::swap(data, copy.data);
+    }
+    return *this;
+}
+
+static buffer make_buffer()
+{
+    buffer buf;
+    return buf;
+}
+
+int main()
+{
+    {
+        buffer buf = make_buffer();
+    }
+
+    cout << "created   : " << created   << endl;
+    cout << "destroyed : " << destroyed << endl;
+
+    return 0;
+}
+```
+
 ## Functional programming
 ### Lambda expressions
 
