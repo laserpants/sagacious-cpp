@@ -60,7 +60,15 @@ int main()
 
 The output of this program is `42`.
 
-An rvalue reference is...
+const ref
+
+Lvalue references and pointers have similar behavior. They are mostly interchangeable, but there are some key differences to be aware of:
+
+* Unlike pointers; once a reference has been created, it cannot be changed to reference another object.
+* References must be initialized when created, and cannot be uninitialized.
+* There is no such thing as a null reference.
+
+An *rvalue reference* is...
 
 ```cpp
 #include <cstring>
