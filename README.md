@@ -145,6 +145,24 @@ created   : 1
 destroyed : 1
 ```
 
+```cpp
+static buffer make_buffer(const int n = 2)
+{
+    if (n > 1) {
+        buffer buf;
+        return buf;
+    }
+
+    buffer buf;
+    return buf;
+}
+```
+
+```
+created   : 2
+destroyed : 2
+```
+
 ## Functional programming
 ### Lambda expressions
 
