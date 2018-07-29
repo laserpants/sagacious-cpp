@@ -140,6 +140,11 @@ int main()
 }
 ```
 
+```
+created   : 1
+destroyed : 1
+```
+
 ## Functional programming
 ### Lambda expressions
 
