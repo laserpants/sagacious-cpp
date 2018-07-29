@@ -82,7 +82,7 @@ int& r = m; // There is no equivalent syntax here
 int* p;  // okay
 int& x;  // not okay
 ```
-* There is no such thing as a null reference.
+* There is no such thing as a *null* reference.
 ```cpp
 int* p = new int{123};
 int& x = *p;           // x is a local reference to the value pointed to by p
