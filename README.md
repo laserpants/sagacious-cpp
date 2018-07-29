@@ -84,21 +84,20 @@ int& x;  // not okay
 ```
 * There is no such thing as a null reference.
 ```cpp
-int* p = new int;
-*p = 123;
-int& x = *p;     // x is now a local reference to the value pointed to by p
+int* p = new int{123};
+int& x = *p;           // x is now a local reference to the value pointed to by p
 x = 5;
  
-cout << *p << endl;  // 5
+cout << *p << endl;    // 5
  
 delete p;
-p = nullptr;     // p is now a nullptr
+p = nullptr;           // p is now a nullptr
  
-if (p) {         // We can't do this with a reference
+if (p) {               // We can't do this with a reference
    *p = 1;
 }
  
-x = 3;           // Undefined behavior
+x = 3;                 // Undefined behavior
 ```
 
 The use of references leads to a more declarative programming style, is safer, but less powerful than equivalent code using pointers.
