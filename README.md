@@ -374,7 +374,7 @@ static void casually_wear_pants()
 }
 ```
 
-The above code introduces a memory leak. In this case, the problem is easy to spot, and fixed merely by inserting `delete the_pants` before the `return` statement. But consider something a bit more subtle, such as the following program.
+The above code induces a memory leak. In this case, the problem is easy to spot, and fixed merely by inserting `delete the_pants` before the `return` statement. But consider something a bit more subtle, such as the following program.
 
 ```cpp
 struct tight_pants_exception : public std::exception
