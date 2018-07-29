@@ -84,22 +84,22 @@ int& x;  // not okay
 ```
 * There is no such thing as a null reference.
 ```cpp
-int *p = new int;
+int* p = new int;
 *p = 123;
-int &x = *p;     // x is now a local reference to p
+int& x = *p;     // x is now a local reference to p
 x = 5;
  
 std::cout << *p << std::endl;          // 5
  
 delete p;
-p = 0;           // pointer is now NULL
+p = nullptr;     // pointer is now a nullptr
  
 if (p) {         // we can't do this with a reference
    *p = 1;
 }
-```
  
 x = 3;           // undefined behavior
+```
 
 An *rvalue reference* is...
 
