@@ -205,6 +205,35 @@ created   : 2
 destroyed : 2
 ```
 
+```cpp
+class buffer
+{
+public:
+    // ...
+    buffer(buffer&& other);
+    buffer& operator=(buffer&& other);
+
+    // ...
+};
+ 
+// Move constructor
+buffer::buffer(buffer&& other)  
+{
+    size = other.size;
+    data = other.data;
+    other.size = 0;
+    other.data = nullptr;
+}
+
+// Move assignment operator
+buffer& buffer::operator=(buffer&& other)  
+{
+    std::swap(size, other.size);
+    std::swap(data, other.data);
+    return *this;
+}
+```
+
 ## Functional programming
 ### Lambda expressions
 
