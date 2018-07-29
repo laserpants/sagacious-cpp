@@ -86,7 +86,7 @@ int& x;  // not okay
 ```cpp
 int* p = new int;
 *p = 123;
-int& x = *p;     // x is now a local reference to p
+int& x = *p;     // x is now a local reference to the value pointed to by p
 x = 5;
  
 cout << *p << endl;  // 5
