@@ -89,7 +89,7 @@ int* p = new int;
 int& x = *p;     // x is now a local reference to p
 x = 5;
  
-std::cout << *p << std::endl;          // 5
+cout << *p << endl;  // 5
  
 delete p;
 p = nullptr;     // pointer is now a nullptr
