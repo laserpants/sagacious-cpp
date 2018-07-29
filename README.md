@@ -65,7 +65,21 @@ const ref
 Lvalue references and pointers have similar behavior. They are mostly interchangeable, but there are some key differences to be aware of:
 
 * Unlike pointers; once a reference has been created, it cannot be changed to reference another object.
+```cpp
+int m = 1;
+int n = 5;
+int* p = &m;
+p = &n; // I changed my mind
+
+int m = 1;
+int n = 5;
+int& r = m;
+```
 * References must be initialized when created, and cannot be uninitialized.
+```cpp
+int* p;  // okay
+int& x;  // not okay
+```
 * There is no such thing as a null reference.
 
 An *rvalue reference* is...
