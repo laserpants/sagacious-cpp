@@ -99,8 +99,9 @@ if (p) {               // We can't do this with a reference
  
 x = 3;                 // Undefined behavior
 ```
+* pointer arithmetic?
 
-The use of references leads to a more declarative programming style, is safer, but less powerful than equivalent code using pointers.
+The use of references leads to more a declarative programming style, which is safer, but less powerful than equivalent code using pointers.
 
 An *rvalue reference* is...
 
