@@ -97,7 +97,7 @@ if (p) {               // We can't do this with a reference
  
 x = 3;                 // Undefined behavior
 ```
-* pointer arithmetic?
+* Pointers are subject to arithmetic manipulation.
 ```cpp
 int vals[11] = {1, 1, 1, 1, 100, 1, 1, 1, 1, 1};
 
