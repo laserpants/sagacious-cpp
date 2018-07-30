@@ -9,18 +9,9 @@ C++ differentiates between lvalues and rvalues. This distinction goes back to C,
 int x = 1 + 1; // here, x is an lvalue, and 1 + 1 an rvalue
 ```
 Unfortunately, this analogy didn't quite work out, and things have become even more complicated with recent changes in the C++ language (more about that later). In its simplest form, we can think of it in this way:
-* Lvalues are named objects who last longer than a single expression (think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
+* Lvalues are named objects that last longer than a single expression (think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
 <!--
-An expressions in C++ is always either an *lvalue*, or an *rvalue*.
-* Lvalues are named objects who last longer than a single expression (think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
-* Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined.
-
-As demonstrated by the following example, lvalues appear on the *left*-hand-side of an assignment.
-
-```cpp
-int x = 1 + 1;
-```
 
 Here, `x` is an lvalue, and `1 + 1` an rvalue. The following will therefore *not* work:
 
