@@ -109,6 +109,23 @@ int* q = p + 4;
 int& r = vals[0];
 int& s = vals[3];   // r + 4 doesn't work
 ```
+* A pointer can point to another pointer. In other words, pointers allow for multiple levels of indirection. You cannot have a reference to a reference. You can, however, have a reference to a pointer (*&).
+```cpp
+{
+    int* p = new int{1};
+    cout << *p << endl;        // 1
+    int* q = p;
+    q = new int{2};            
+    cout << *p << endl;        // 1
+}
+{
+    int* p = new int{1};
+    cout << *p << endl;        // 1
+    int*& q = p;
+    q = new int{2};
+    cout << *p << endl;        // 2
+}
+```
 The use of references leads to more a declarative programming style, which is safer, but less powerful than equivalent code using pointers.
 
 An *rvalue reference* is...
