@@ -10,7 +10,8 @@ int x = 1 + 1; // here, x is an lvalue, and 1 + 1 an rvalue
 ```
 Unfortunately, the left-right analogy didn't quite work out, and things have become a bit more complicated with recent changes in the C++ language (more about that later). In its simplest form, we can think of it in the following way:
 * Lvalues are named objects that last longer than a single expression (think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
-* Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined. In the above example, `1 + 1` is
+* Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined. 
+
 Rvalues cannot be used as a left operand of an assignment. The following will therefore *not* work:
 ```cpp
 1 + 1 = x;
