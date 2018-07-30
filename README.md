@@ -115,7 +115,7 @@ int*** r = &q;
 int**** s = &r;
 cout << ****s << endl; // 1234
 ```
-> You can, however, have a reference to a pointer (*&).
+  You can, however, have a reference to a pointer (*&).
 ```cpp
 {
     int* p = new int{1};
