@@ -66,7 +66,7 @@ const ref
 
 Lvalue references and pointers have similar behavior. They are mostly interchangeable, but there are some key differences to be aware of:
 
-* Unlike pointers; once a reference has been created, it cannot be changed to reference another object.
+* Unlike pointers; once a reference has been created, it cannot be changed to reference some other object.
 ```cpp
 int m = 1;
 int n = 5;
