@@ -82,7 +82,7 @@ int& r = m; // There is no equivalent syntax here
 int* p;  // okay
 int& x;  // not okay
 ```
-* There is no such thing as a null reference. A reference can be invalid, but we will have to go to some lengths to end up with one.
+* There is no such thing as a null reference. A reference can be invalid, but the programmer has to go to some lengths to end up with one.
 ```cpp
 int* p = new int{123};
 int& x = *p;           // x is a local reference to the value pointed to by p
@@ -100,7 +100,15 @@ if (p) {               // We can't do this with a reference
 x = 3;                 // Undefined behavior
 ```
 * pointer arithmetic?
+```cpp
+int vals[11] = {1, 1, 1, 1, 100, 1, 1, 1, 1, 1};
 
+int* p = vals;
+int* q = p + 4;
+
+int& r = vals[0];
+int& s = vals[3];   // r + 4 doesn't work
+```
 The use of references leads to more a declarative programming style, which is safer, but less powerful than equivalent code using pointers.
 
 An *rvalue reference* is...
