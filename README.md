@@ -109,7 +109,7 @@ int* q = p + 4;
 int& r = vals[0];
 int& s = vals[3];   // r + 4 doesn't work
 ```
-* A pointer can point to another pointer. In other words, pointers allow for multiple levels of indirection. You cannot have a reference to a reference. You can, however, have a reference to a pointer (*&).
+* A pointer can point to another pointer. In other words, pointers allow for multiple levels of indirection, while you cannot have a reference to a reference. You can, however, have a reference to a pointer (*&).
 ```cpp
 {
     int* p = new int{1};
