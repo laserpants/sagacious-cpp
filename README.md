@@ -61,7 +61,7 @@ int n = 5;
 int* p = &m;
 p = &n;     // I changed my mind.
 
-int& r = m; // There is no equivalent syntax here
+int& r = m; // There is no corresponding syntax here
 // r = n    // Results in the value of n (5) being assigned to m
 // &r = n   // Just give up!
 ```
