@@ -4,7 +4,7 @@ Modern C++ can be sagacious.
 
 ## Move semantics
 ### Rvalue references
-C++ differentiates between lvalues and rvalues. This distinction goes back to C, and the idea of an lvalue as one that appears on the *left*-hand-side of an assignment. 
+C++ differentiates between lvalues and rvalues. This distinction goes back to C, and the idea of an lvalue as one that appears on the *left*-hand side of an assignment. 
 ```cpp
 int x = 1 + 1; // here, x is an lvalue, and 1 + 1 an rvalue
 ```
