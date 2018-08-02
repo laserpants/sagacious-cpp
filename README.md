@@ -258,6 +258,131 @@ buffer& buffer::operator=(buffer&& other)
 ```
 -->
 
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+class classic
+{
+public:
+    classic() : _data{new int[1024]} { cout << "allocating resource" << endl; }
+
+    ~classic() 
+    { 
+        if (_data) {
+            delete _data;
+            _data = nullptr;
+            cout << "releasing resource" << endl; 
+        }
+    }
+
+    classic(const classic& other) : _data{new int[1024]}
+    { 
+        std::copy(other._data, other._data + 1024, _data);  
+        cout << "allocating resource (copying)" << endl; 
+    }
+
+    classic& operator=(const classic& other)
+    { 
+        if (&other != this) {
+            classic copy(other);
+            std::swap(_data, copy._data);
+        }
+        return *this; 
+    }
+
+private:
+    int* _data;
+};
+
+class modern
+{
+public:
+    modern() : _data{new int[1024]} { cout << "allocating resource" << endl; }
+
+    ~modern() 
+    { 
+        if (_data) {
+            delete _data;
+            _data = nullptr;
+            cout << "releasing resource" << endl; 
+        }
+    }
+
+    modern(const modern& other) : _data{new int[1024]}
+    { 
+        std::copy(other._data, other._data + 1024, _data);  
+        cout << "allocating resource (copying)" << endl; 
+    }
+
+    modern& operator=(const modern& other)
+    { 
+        if (&other != this) {
+            modern copy(other);
+            std::swap(_data, copy._data);
+        }
+        return *this; 
+    }
+
+    modern(modern&& other) 
+    { 
+        _data = other._data;
+        other._data = nullptr;
+        cout << "moving resource" << endl; 
+    }
+
+    modern& operator=(modern&& other) 
+    { 
+        if (&other != this) {
+            std::swap(_data, other._data);
+            cout << "moving resource (assignm.)" << endl; 
+        }
+        return *this; 
+    }
+
+private:
+    int* _data;
+};
+
+class classic_gadget
+{
+public:
+    void set_gizmo(const classic& gizmo) { _gizmo = gizmo; }
+
+private:
+    classic _gizmo;
+};
+
+class modern_gadget
+{
+public:
+    void set_gizmo(modern&& gizmo) { _gizmo = std::move(gizmo); }
+
+private:
+    modern _gizmo;
+};
+
+int main()
+{
+    {
+        cout << "[1]" << endl;
+        classic_gadget g;
+        cout << "[2]" << endl;
+        g.set_gizmo(classic{});
+        cout << "[3]" << endl;
+    }
+    {
+        cout << "[4]" << endl;
+        modern_gadget g;
+        cout << "[5]" << endl;
+        g.set_gizmo(modern{});
+        cout << "[6]" << endl;
+    }
+    return 0;
+}
+```
 ## Functional programming
 ### Lambda expressions
 
