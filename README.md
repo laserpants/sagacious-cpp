@@ -269,7 +269,7 @@ class classic
 public:
     classic() : _data{new int[1024]} { cout << "allocating resource" << endl; }
 
-    ~classic() 
+    virtual ~classic() 
     { 
         if (_data) {
             delete _data;
@@ -293,38 +293,14 @@ public:
         return *this; 
     }
 
-private:
+protected:
     int* _data;
 };
 
-class modern
+class modern : public classic
 {
 public:
-    modern() : _data{new int[1024]} { cout << "allocating resource" << endl; }
-
-    ~modern() 
-    { 
-        if (_data) {
-            delete _data;
-            _data = nullptr;
-            cout << "releasing resource" << endl; 
-        }
-    }
-
-    modern(const modern& other) : _data{new int[1024]}
-    { 
-        std::copy(other._data, other._data + 1024, _data);  
-        cout << "allocating resource (copying)" << endl; 
-    }
-
-    modern& operator=(const modern& other)
-    { 
-        if (&other != this) {
-            modern copy(other);
-            std::swap(_data, copy._data);
-        }
-        return *this; 
-    }
+    modern() = default;
 
     modern(modern&& other) 
     { 
@@ -341,9 +317,6 @@ public:
         }
         return *this; 
     }
-
-private:
-    int* _data;
 };
 
 class classic_gadget
@@ -383,6 +356,7 @@ int main()
     return 0;
 }
 ```
+
 ## Functional programming
 ### Lambda expressions
 
