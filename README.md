@@ -63,7 +63,7 @@ p = &n;     // I changed my mind.
 
 int& r = m; // There is no corresponding syntax here
 // r = n    // Results in the value of n (5) being assigned to m
-// &r = n   // Just give up!
+// &r = n   // Just give up! :)
 ```
 * References must be initialized when created, and cannot be uninitialized.
 ```cpp
