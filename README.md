@@ -31,7 +31,7 @@ y = 0;
 cout << x << endl;  // 0
 ```
 
-The lvalue reference declarator (`&`) is a syntactic addition introduced by C++. It doesn't exist in C (though pointers can be used in C to achieve the same result). In a function signature, the &-declarator expresses that an argument should be passed by reference:
+The lvalue reference declarator (`&`) is a syntactic addition introduced in C++. It doesn't exist in C (though pointers can be used in C to achieve the same result). In a function signature, the &-declarator expresses that an argument should be passed by reference:
 
 ```cpp
 static void do_stuff_with(int& x)
