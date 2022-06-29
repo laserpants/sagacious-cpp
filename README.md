@@ -9,7 +9,7 @@ C++ distinguishes between lvalues and rvalues. This goes back to C, and the idea
 int x = 1 + 1; // here, x is an lvalue, and 1 + 1 an rvalue
 ```
 Unfortunately, the left-right analogy doesn't quite hold up, and with the introduction of rvalue *references*, things get even more complicated. As a starting point for this discussion, we will think of it in the following way:
-* Lvalues are named objects that last longer than a single expression (think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
+* Lvalues are named objects that last longer than a single expression (as a useful mnemonic, think ‘l’ as in lingering :smiley:). All *variables* are lvalues.
 * Rvalues are temporaries. The lifetime of an rvalue is limited to the expression in which it is defined. 
 
 Rvalues cannot be used as a left operand of an assignment. The following will therefore *not* work:
